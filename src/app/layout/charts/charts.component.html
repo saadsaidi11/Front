@@ -1,0 +1,52 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Update Traffic Light'" [icon]="'fa fa-lightbulb-o'"></app-page-header>
+           
+                         
+    
+                <form #personForm="ngForm"(ngSubmit)="onSubmit(personForm.value)"> 
+                        
+                                 
+                                <input class="col-xs-3 col-md-5"  style="background-color:rgb(255, 255, 255);" type= "number" name="id" [(ngModel)]="id" placeholder="Enter Intersection ID [1..11]" min="1" max="11" required>
+                               
+                                <input class="col-xs-3 col-md-5" style="background-color:rgb(255, 255, 255);" type= "number" name="Urgence_Nord" [(ngModel)]="Urgence_Nord" placeholder="Time (sec) for the North Traffic Light [20 .. 140]" min="20" max="140" required>
+                               
+                                <input class="col-xs-3 col-md-5" style="background-color:rgb(255, 255, 255);" type= "number" name="Urgence_Est" [(ngModel)]="Urgence_Est" placeholder="Time (sec) for the East Traffic Light [20 .. 140]" min="20" max="140" required>
+                                
+                                <input class="col-xs-3 col-md-5" style="background-color:rgb(255, 255, 255);" type= "number" name="Urgence_Sud" [(ngModel)]="Urgence_Sud" placeholder="Time (sec) for the South Traffic Light [20 .. 140]" min="20" max="140" required>
+                                
+                                <input class="col-xs-3 col-md-5" style="background-color:rgb(255, 255, 255);" type= "number" name="Urgence_West" [(ngModel)]="Urgence_West" placeholder="Time (sec) for the West Traffic Light [20 .. 140]" min="20" max="140" required>    
+                                <button class="btn btn-outline-info btn-sm" [disabled]="!personForm.valid" type="submit">UPDATE TRAFFIC LIGHT</button>
+                                
+                </form>
+                
+                <div class="jumbotron">
+                        <h3>In case of EMERGENCY !</h3>
+                        <p>
+                            Admin could update manually a traffic light, starting by selecting the wanted intersection then the time a traffic light should be ON , based on the map below (extracted from Leipziger Straße, Berlin)
+                        </p>
+                        <p>
+                                <img  class="navbar-brand" src="assets/images/map.png">
+                               <!--width="228" height="38" class="d-inline-block align-top" alt=""-->
+                        </p>
+                    </div>
+                
+
+                
+
+
+                    <!--<div class="form-group">
+                        <label for="firstName">Enter ID</label>
+                        <input (keyup.enter)="getID(id)" #id
+                                type="text" class="form-control">
+                        </div>
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <input type="text" id="comment" class="form-control">
+                    </div>-->
+                
+
+               
+          
+       
+     
+</div>

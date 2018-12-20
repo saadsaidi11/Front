@@ -1,0 +1,7 @@
+// shared css for the login and signup page
+.image{
+    height:43em; background-size:cover; width:auto;
+    background-image:url('https://c1.staticflickr.com/9/8485/8280025149_f4f21962c1_b.jpg');
+    background-position:50% 50%;
+  }
+@import "../login/login.component.scss";
